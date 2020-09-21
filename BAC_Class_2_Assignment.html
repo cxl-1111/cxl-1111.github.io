@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap");
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        line-height: 1.6;
+      }
+      .bg {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        font-weight: bolder;
+      }
+
+      .bg::before {
+        content: "";
+        background: url(https://source.unsplash.com/weekly?design) no-repeat
+          center center/cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.4;
+      }
+
+      .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+      }
+
+      h1 {
+        color: #252cb3;
+        text-align: center;
+        font-size: 50px;
+        font-family: lobster;
+        padding-top: 50px;
+      }
+      h2 {
+        color: rgb(143, 32, 143);
+        text-align: center;
+        font-size: 40px;
+        font-style: italic;
+      }
+
+      p {
+        padding-bottom: 20px;
+        font-size: 20px;
+      }
+
+      img {
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 40px;
+        margin-left: 10px;
+      }
+
+      .container {
+        text-align: left;
+        font-family: "Grandstander", cursive;
+        border-width: 5px;
+        border-color: grey;
+        border-style: solid;
+        margin-bottom: 20px;
+        box-shadow: 10px 10px rgb(117, 108, 108);
+      }
+
+      ul {
+        list-style: none;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bg">
+      <div class="content">
+        <h1>CX.LEE</h1>
+        <h2>Web Development</h2>
+        <p>
+          Hi everyone, nice to meet you and i am hoping to pick up a new skill
+          from this course
+        </p>
+        <a
+          href=" https://randomuser.me/api/portraits/men/19.jpg"
+          target="_blank"
+        >
+          <img
+            src="https://randomuser.me/api/portraits/men/19.jpg"
+            height="200"
+            alt="Random Man"
+          />
+        </a>
+        <section>
+          <div class="container">
+            <h3>My experience</h3>
+            <ul>
+              <li>
+                Work in financial institution as an operation executive for my
+                first job.
+              </li>
+              <li>
+                Moved to engineering field as a sales engineer in air compressor
+                and subsequently to commercial/industrial Air-Conditioning
+                System.
+              </li>
+            </ul>
+          </div>
+
+          <div class="container">
+            <h3>My skills</h3>
+
+            <ul>
+              <li>Investment valuation.</li>
+              <li>Sales/marketing financial/engineering products.</li>
+            </ul>
+          </div>
+
+          <div class="container">
+            <h3>My Education</h3>
+            <ul>
+              <li>BEng Building Services.</li>
+              <li>MSc Financial Management.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
