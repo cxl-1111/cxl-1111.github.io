@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel & Leisure</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .hero {
+        background: url(https://source.unsplash.com/Yui5vfKHuzs/1600x1000)
+          no-repeat center center/cover;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(202, 182, 182, 0.2);
+      }
+
+      .hero .logo {
+        display: flex;   
+        justify-content: space-between;
+        padding: 30px 30px 30px 30px;
+        position: relative;
+        background: rgba(169, 201, 96, 0.4);
+        z-index: 10;
+      }
+    
+      .hero .logo .logoLeft {
+        display: flex;
+      }
+
+         .hero .logo .logoLeft h2 .homeLogo {
+        margin-left: 10px;
+      }
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        list-style: none;
+      }
+      li a {
+        text-decoration: none;
+        padding-left: 30px;
+        color: black;
+      }
+
+      a {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        height: 60%;
+        font-size: 20px;
+        line-height: 70px;
+      }
+
+      h1 {
+        font-weight: 900;
+        color: black;
+      }
+      .container p {
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      .destination p {
+        margin: 40px 0 40px 0;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(45, 89, 170);
+        font-weight: 900;
+      }
+
+      .location-PG,
+      .location-KL {
+        border: solid 2px red;
+        background-color: rgb(224, 211, 211, 0.3);
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .location-PG h3,
+      .location-KL h3 {
+        margin: 50px 0 40px 0;
+        text-align: center;
+        font-size: 40px;
+        color: black;
+        font-weight: 900;
+      }
+      .flex-row {
+        display: flex;
+        
+      }
+      .flex-row-1 {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 50%;
+      }
+    
+      .destination .location-PG img,
+      .destination .location-KL img {
+        padding: 10px 5px 10px 5px;
+        height: 300px;
+        width: 50%;
+      }
+
+      .destination .content-history {
+        border: blue 2px solid;
+        border-radius: 20px;
+        margin: 20px 10px 10px 10px;
+        background-color: white;
+        box-shadow: 3px 3px rgb(83, 83, 151);
+      }
+
+      .destination .content-history h4 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 30px;
+      }
+
+      .destination .content-history p {
+        font-size: 20px;
+        text-align: justify;
+        padding-top: 10px;
+        margin: 5px 20px 20px 20px;
+        line-height: 30px;
+        color: black;
+      }
+
+      .contact {
+        margin: 20px 0;
+        border: 2px solid black;
+      }
+      .flex-row-2 {
+        display: flex;
+      }
+      .flex-row-2 img {
+        width: 50%;
+      }
+      .callBack {
+        background-color: rgb(231, 218, 218, 0.3);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        padding: 40px;
+      }
+
+      .contact .flex-row-2 .callBack h4 {
+        font-size: 30px;
+      }
+
+      .callback-form {
+        width: 100%;
+      }
+
+      .callback-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .callback-form .form-style {
+        margin-bottom: 15px;
+      }
+
+      .callback-form input {
+        width: 100%;
+        padding: 4px;
+        height: 40px;
+      }
+
+      .callback-form input:focus {
+        outline-color: #28a745;
+      }
+
+      .callback-form .btn {
+        padding: 12px 0;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: rgb(216, 193, 164);
+        font-weight: bold;
+      }
+
+      .footer-bg {
+        background-color: rgb(90, 74, 74);
+        color: white;
+        margin-top: 20px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        line-height: 1.5em;
+      }
+
+      .footer-bg .social a {
+        color: white;
+      }
+
+      .footer-bg .social a:hover {
+        color: green;
+      }
+
+      /* mobile */
+      @media (max-width: 768px) {
+
+        .hero .logo {
+          flex-direction: column;
+          align-items: center;
+          
+        }
+
+        h2, .navBarRight, .container {
+          font-size: 20px;
+        }
+
+        a {
+          font-size: 15px;
+        }
+
+        .container h1{
+          display: none;
+        }
+          
+      .hero .logo .logoLeft {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 30px;
+      }
+
+        .hero .logo h2 .homeLogo  {
+          padding-top: 20px;
+        }
+        .navBarRight {
+          margin-top: 20px;
+        }
+        .flex-row {
+          flex-direction: column;
+        }
+        .flex-row-2 {
+          flex-direction: column;
+        }
+        .flex-row-2 img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="logo">
+        <div class="logoLeft">
+        <h2>
+          Welcome to Jalan-Jalan </h2>
+          <h2>
+          <span class="homeLogo"
+            ><i class="fas fa-shoe-prints"></i>
+            <i class="fas fa-shoe-prints"></i>
+            <i class="fas fa-shoe-prints"></i>
+          </span>
+       </h2>
+      </div>
+        <nav class="navBarRight">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destination">Destination</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container">
+        <h1>Jalan-Jalan</h1>
+        <p>
+          “Travel makes one modest, you see what a tiny place you occupy in the
+          world.”
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="destination">
+        <p>Places to visit and have fun</p>
+
+        <div class="location-PG">
+          <h3>PENANG</h3>
+          <div class="flex-row">
+            <div class="flex-row-1">
+              <img
+                src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107446/Penang_art_1_shjtkg.jpg"
+                alt="Penang - Wall painting,children playing basketball"
+              />
+              <img
+                src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601262865/Penang_art_2_imvsnq.jpg"
+                alt="Penang - Wall painting,chilren with bicycle"
+              />
+            </div>
+              <div class="flex-row-1">
+                <img
+                  src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107446/Penang_art_3_mmgyif.jpg"
+                  alt="Penang - Kek Lok Si Temple"
+                />
+                <img
+                  src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107445/Penang_art_4_fnergb.jpg"
+                  alt="Penang - Cafe in Penang"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="content-history">
+            <h4>Description</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Veritatis, fugiat soluta magni ipsum tenetur minima nulla ratione
+              aut quae possimus, reprehenderit natus ex nobis. Sunt veritatis
+              voluptas a beatae eius! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Incidunt molestiae neque debitis sapiente
+              tenetur! Odit est ut consectetur facilis quam debitis voluptatum.
+              Delectus consequatur quam soluta neque quas natus illo?
+            </p>
+          </div>
+        </div>
+
+        <div class="location-KL">
+          <h3>Kuala Lumpur & Selangor</h3>
+          <div class="flex-row">
+            <div class="flex-row-1">
+              <img
+                src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107446/KL_1_r0ysuo.jpg"
+                alt="Kuala Lumpur - Twin Tower"
+              />
+              <img
+                src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107446/Selangor_1_bbvbhv.jpg"
+                alt="Selangor - Batu Cave"
+              />
+            </div>
+            <div class="flex-row-1">
+              <img
+                src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107446/Selangor_2_iphzwb.jpg"
+                alt="Selangor - Cameron Island Field"
+              />
+              <img
+                src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107446/Selangor_3_guqqag.jpg"
+                alt="Selangor - Night Market"
+              />
+            </div>
+          </div>
+          <div class="content-history">
+            <h4>Description</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Veritatis, fugiat soluta magni ipsum tenetur minima nulla ratione
+              aut quae possimus, reprehenderit natus ex nobis. Sunt veritatis
+              voluptas a beatae eius! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Incidunt molestiae neque debitis sapiente
+              tenetur! Odit est ut consectetur facilis quam debitis voluptatum.
+              Delectus consequatur quam soluta neque quas natus illo?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="flex-row-2">
+          <img
+            src="https://res.cloudinary.com/dofkevwhv/image/upload/v1601107445/Call_g1lak2.jpg"
+            alt=""
+          />
+          <div class="callBack">
+            <h4>Request Call Back</h4>
+            <form action="" class="callback-form">
+              <div class="form-style">
+                <label for="name"></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter name"
+                />
+              </div>
+              <div class="form-style">
+                <label for="email"></label>
+                <input
+                  type="email"
+                  name="email"
+                  id="name"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-style">
+                <label for="phone"></label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter phone"
+                />
+              </div>
+              <input type="submit" value="Send" id="submit" class="btn" />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-bg">
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <div class="social-1">
+          <p>Name - CX.Lee</p>
+          <p>Mobile - 017-123456789</p>
+          <p>
+            Office address - 123 jalan serindit 902, taman gembira 59382 Kuala
+            Lumpur
+          </p>
+        </div>
+        <p>Copyright &copy; 2020 - Jalan-Jalan</p>
+      </footer>
+    </main>
+  </body>
+</html>
